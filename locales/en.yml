@@ -2,3 +2,22 @@ en:
   lita:
     handlers:
       aws:
+        help:
+          ec2:
+            instance:
+              list:
+                syntax: aws ec2 instance list <region>
+                desc: List AWS EC2 Instances for your account
+              show:
+                syntax: aws ec2 instance show <instance-id> <region>
+                desc: Show detailed instance information
+            ami:
+              list:
+                syntax: aws ec2 ami list <region>
+                desc: Lists available AMIs for specific region
+              launch:
+                syntax: aws ec2 ami launch <region> <ami-id> <count> <instance-size>
+                desc: Launches x number of AMIs
+              copy:
+                syntax: aws ec2 ami copy <ami-id> <name> <source-region> <destination-region>
+                desc: Launches x number of AMIs
